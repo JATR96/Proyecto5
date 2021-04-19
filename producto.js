@@ -43,13 +43,27 @@ const llenarTabla = (productos) => {
         <td>  ${item.producto} </td>
         <td>  ${item.categoria} </td>
         <td>  ${formatoDinero(item.precio)} </td>
-        <td>  ${item.proveedor}</td>  
+        <td>  ${item.proveedor}</td>
+        <td> <button class='boton-editar' value=${index}> <image src="imagenes/edit.svg"> </button> </td>  
+        <td> <button class='boton-eliminar' value=${index}> <image src="imagenes/trash_can.svg"> </button> </td>  
         <tr>
         `});
 
     contenidoTabla.innerHTML = contenido;
 }
 
+const eliminarProducto = (event) => {
+    event.preventDefault();
+    if (event.target.className == 'boton-eliminar') {
+        delete autos[event.target.value];
+    }
+    llenarTabla();
+}
+
 btnBuscar.addEventListener('click', buscarProducto)
 body.addEventListener('click', buscarProducto)
+
+
+let botonEliminar = document.querySelector("body");
+botonEliminar.addEventListener('click', eliminarProducto)
 

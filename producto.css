@@ -16,6 +16,7 @@ table td, th {
 
 table tr th a {
     text-decoration: none;
+    color: white;
 }
 
 tr:nth-child(even) {
@@ -29,7 +30,7 @@ tr:hover {
 th {
     padding-top: 12px;
     padding-bottom: 12px;
-    text-align: left;
+    text-align: center;
     background-color: #4CAF50;
     color: white;
 }
@@ -66,7 +67,7 @@ form input, select {
 
 button {
     padding: 10px;
-    background: #2196F3;
+    background: rgb(15, 109, 197);
     color: white;
     font-size: 17px;
     border: 1px solid grey;
@@ -77,6 +78,10 @@ button {
     margin: 0px 20px;
 }
 
+.boton-editar{
+    background: rgb(97, 96, 96);
+}
+
 .boton-eliminar {
-    background: tomato;
+    background: rgb(187, 21, 21);
 }
