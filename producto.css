@@ -56,7 +56,7 @@ form label {
     margin: 0px 10px;
 }
 
-form input {
+form input, select {
     display: inline-block;
     font-size: 17px;
     margin-top: 5px;
